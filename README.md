@@ -2,7 +2,7 @@
 
 ### Description
 
-Je partage ici mes *corrections* pour les épreuves pratiques du baccalauréat de NSI, afin de pouvoir permettre aux gens de se corriger et d'apprendre.
+Je partage ici mes *corrections* pour les épreuves pratiques du baccalauréat de NSI, afin de pouvoir permettre aux gens de me corriger et d'apprendre.
 
 ### Contributions
 
