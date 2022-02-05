@@ -1,10 +1,9 @@
 def recherche(elt: int, tab: list) -> int:
     """retourne l'indice de la premiere occurence de elt dans tab ou -1"""
-    indice = -1  # on initialise l'indice a - 1
     for i in range(len(tab)):
         if tab[i] == elt:
-            indice = i
-    return indice
+            return i # on retourne des que l'on trouve elt
+    return -1
 
 
 def insere(a, tab):
