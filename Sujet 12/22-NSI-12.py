@@ -15,7 +15,7 @@ def tri(tab):
         if tab[i]== 0:
             i = i + 1 # dans ce cas on incremente juste i
         else :
-            valeur = tab[j] # sinon on echange avec j, tout en restant au meme indice
+            valeur = tab[j] # sinon on echange avec j, tout en restant au meme indice i
             tab[j] = 1
             tab[i] = valeur
             j = j - 1 # on decremente j
