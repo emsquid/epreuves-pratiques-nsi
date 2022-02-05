@@ -14,7 +14,7 @@ def fusion(L1, L2):
     L12 = [0] * (n1 + n2)
     i1 = 0
     i2 = 0
-    i = 0  # a quoi sert cette variable i ?
+    i = 0
     while i1 < n1 and i2 < n2:  # tant que i1 < n1 et i2 < n2
         if L1[i1] < L2[i2]:
             L12[i] = L1[i1]  # on ajoute L1[i1] s'il est plus petit
