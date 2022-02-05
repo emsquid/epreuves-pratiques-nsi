@@ -1,6 +1,6 @@
-def moyenne(tab: list) -> float:
+def moyenne(tab: list) -> float:  # similaire au sujet 12
     """renvoie la moyenne du tableau"""
-    assert type(tab) == list and tab != [], "tab est un tableau non vide"
+    assert type(tab) == list and tab != [], "tab doit etre un tableau non vide"
     # solution facile : return sum(tab) / len(tab)
     total = 0
     for element in tab:
