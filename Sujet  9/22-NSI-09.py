@@ -1,6 +1,6 @@
 def calcul(n: int) -> list:
-    """renvoie la suite de syracuse en partant de n"""
-    assert type(n) == int and n > 0, "n est un entier strictement positif"
+    """renvoie les valeurs de la suite de syracuse en partant de n"""
+    assert type(n) == int and n > 0, "n doit etre un entier strictement positif"
     suite = [n]
     while n != 1:
         if n % 2 == 0:
@@ -43,7 +43,7 @@ dico = {
 
 def est_parfait(mot):
     # mot est une chaîne de caractères (en lettres majuscules)
-    assert mot.isupper(), "mot doit etre en majuscules"
+    # assert mot.isupper(), "mot doit etre en majuscules"
     code_c = ""
     code_a = 0  # code additionne, initialise a 0
     for c in mot:

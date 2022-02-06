@@ -1,8 +1,6 @@
 def recherche(caractere: str, mot: str) -> int:
     """renvoie le nombre d'occurences du caractere dans le mot"""
-    assert (
-        type(caractere) == str and type(mot) == str
-    ), "caractere et mot doivent etre des str"
+    assert type(caractere) == type(mot) == str, "caractere et mot doivent etre des str"
     # solution facile : mot.count(caractere)
     compte = 0
     for lettre in mot:

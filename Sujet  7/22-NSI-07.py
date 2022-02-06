@@ -1,10 +1,11 @@
 def conv_bin(n: int) -> tuple:
     """renvoie le binaire de n et le nombre de bits qui le composent"""
+    assert type(n) == int and n > 0, "n doit etre un entier positif"
     binaire = []
     while n > 0:
-        binaire.append(n % 2)  # on le reste de la division par 2
+        binaire.append(n % 2)  # on prend le reste de la division par 2
         n //= 2  # puis on divise n par 2
-    binaire.reverse()  # on retourne
+    binaire.reverse()  # on inverse
     return (binaire, len(binaire))
 
 

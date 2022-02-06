@@ -3,8 +3,7 @@ def rechercheMinMax(tableau: list) -> dict:
     sous la forme d'un dico"""
     if tableau == []:  # si le tableau est vide on renvoie des Nones
         return {"min": None, "max": None}
-    else:
-        # on initialise le min et le max au premier entier
+    else:  # sinon on initialise le min et le max au premier entier
         resultat = {"min": tableau[0], "max": tableau[0]}
         for entier in tableau:  # on itere sur les entiers
             if entier < resultat["min"]:  # on compare au min
@@ -49,7 +48,7 @@ class PaquetDeCarte:
         """Remplit le paquet de cartes"""
         for c in range(1, 5):  # toutes les couleurs (entre 1 et 4)
             for v in range(1, 14):  # toutes les valeurs (entre 1 et 13)
-                self.contenu.append(Carte(c, v))  # on ajoute la carte
+                self.contenu.append(Carte(c, v))
 
     def getCarteAt(self, pos):
         """Renvoie la Carte qui se trouve à la position donnée"""
