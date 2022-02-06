@@ -2,7 +2,7 @@
 
 ### Description
 
-Je partage ici mes *réponses* pour les épreuves pratiques du baccalauréat de NSI 2022, afin de pouvoir permettre aux gens de me corriger et d'apprendre.
+Je partage ici mes *réponses* pour les épreuves pratiques du baccalauréat de NSI 2022, pour pouvoir permettre aux gens de me corriger et d'apprendre.
 
 ### Contributions
 
