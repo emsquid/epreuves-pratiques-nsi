@@ -5,10 +5,11 @@ def convertir(T: list) -> int:
     décimale de l'entier positif dont la représentation binaire
     est donnée par le tableau T
     """
+    assert type(T) == list, "T doit etre un tableau"
     entier = 0
     puissance = 0
-    for bit in reversed(T):
-        entier += (2**puissance) * bit  # * bit permet d'ajouter quand le bit vaut 1
+    for bit in reversed(T):  # on renverse T pour partir du debut
+        entier += (2**puissance) * bit  # * bit : permet d'ajouter quand le bit vaut 1
         puissance += 1
     return entier
 

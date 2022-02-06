@@ -3,12 +3,12 @@ def occurrence_max(chaine: str) -> str:
     # je n'ai pas suivi les recommandations de l'exercice
     # car leur methode revient a une utilisation de dictionnaire sans dictionnaire
     assert type(chaine) == str and chaine != "", "chaine doit ne pas etre vide"
-    compte = {chr(ord("a") + i): 0 for i in range(26)}  # dico contenant les lettres
-    maxi = chaine[0]  # variable pour tenir compte de la lettre la plus frequente
+    freq = {chr(ord("a") + i): 0 for i in range(26)}  # dico contenant les frequences
+    maxi = chaine[0]  # variable pour tenir freq de la lettre la plus frequente
     for caractere in chaine:
-        if caractere in compte.keys():
-            compte[caractere] += 1
-            if compte[caractere] > compte[maxi]:
+        if caractere in freq.keys():
+            freq[caractere] += 1
+            if freq[caractere] > freq[maxi]:
                 maxi = caractere
     return maxi
 
@@ -26,8 +26,8 @@ def nbCol(image):
 def negatif(image):
     """renvoie le negatif de l'image sous la forme
     d'une liste de listes"""
-    L = [[0 for k in range(nbCol(image))] for i in range(nbLig(image))]
     # on cree une image de 0 aux memes dimensions que le parametre image
+    L = [[0 for k in range(nbCol(image))] for i in range(nbLig(image))]
     for i in range(len(image)):  # pourquoi ne pas utiliser nbLig ???
         for j in range(nbCol(image)):
             L[i][j] = 255 - image[i][j]  # x_n + x_i = 255 -> x_n = 255 - x_i
@@ -40,9 +40,8 @@ def binaire(image, seuil):
     du pixel est strictement inferieure au seuil
     et 1 sinon"""
     # l'exemple de cette fonction semble etre faux et renvoyé l'inverse
-    L = [
-        [0 for k in range(nbCol(image))] for i in range(nbLig(image))
-    ]  # on cree une image de 0 aux memes dimensions que le parametre image
+    # on cree une image de 0 aux memes dimensions que le parametre image
+    L = [[0 for k in range(nbCol(image))] for i in range(nbLig(image))]
     for i in range(len(image)):
         for j in range(nbCol(image)):
             if image[i][j] < seuil:

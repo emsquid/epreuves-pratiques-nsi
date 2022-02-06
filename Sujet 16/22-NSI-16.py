@@ -1,4 +1,4 @@
-def maxi(tab: list) -> tuple:  # identique au sujet au sujet 6
+def maxi(tab: list) -> tuple:  # similaire au sujet au sujet 6
     """retourne le maximum de la liste et son indice"""
     assert type(tab) == list and tab != [], "tab doit etre un tableau non vide"
     i_max = 0

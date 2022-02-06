@@ -1,6 +1,7 @@
 def recherche(elt: int, tab: list) -> list:
     """renvoie le tableau des indices de elt dans tab"""
     # en comprehension : return [i for i in range(len(tab)) if tab[i] == elt]
+    assert type(tab) == list, "tab doit etre un tableau"
     indices = []
     for i in range(len(tab)):
         if tab[i] == elt:

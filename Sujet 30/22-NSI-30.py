@@ -3,9 +3,9 @@ def fusion(tab1: list, tab2: list) -> list:
     assert type(tab1) == type(tab2) == list, "tab1 et tab2 doivent etre des tableaux"
     assert tab1 != [] and tab2 != [], "tab1 et tab2 doivent etre non vides"
     tab = []
-    n1, n2 = len(tab1), len(tab2)
-    i1, i2 = 0, 0
-    while i1 < n1 and i2 < n2:  # tant que i1 < n1 et i2 < n2
+    n1, n2 = len(tab1), len(tab2)  # tailles
+    i1, i2 = 0, 0  # indices
+    while i1 < n1 and i2 < n2:
         if tab1[i1] < tab2[i2]:
             tab.append(tab1[i1])
             i1 += 1

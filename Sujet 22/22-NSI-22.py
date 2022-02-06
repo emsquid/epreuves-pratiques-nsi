@@ -1,6 +1,6 @@
 def renverse(mot: str) -> str:
     """renvoie le mot inverse"""
-    assert type(mot) == str and mot != "", "mot est une chaine non vide"
+    assert type(mot) == str and mot != "", "mot doit etre une chaine non vide"
     # solution facile : return mot[::-1]
     inverse = ""
     for lettre in mot:

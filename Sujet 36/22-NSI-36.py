@@ -28,11 +28,11 @@ def plus_courte_distance(tab, depart):
     courte distance du point depart."""
     assert type(tab) == list, "tab doit etre un tableau de tuples"
     point = tab[0]
-    min_dist = distance(point, depart)  # on initialise la distance minimum
+    min_dist = distance(point, depart)
     for i in range(1, len(tab)):  # on parcourt tout le tableau
         if distance(tab[i], depart) < min_dist:  # si la distance est inferieur a min
             point = tab[i]  # on change le point associe
-            min_dist = distance(tab[i], depart)  # et la distance
+            min_dist = distance(tab[i], depart)  # et la distance min
     return point
 
 

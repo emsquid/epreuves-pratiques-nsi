@@ -1,6 +1,6 @@
 def taille(arbre: dict, lettre: str) -> int:
-    """renvoie la taille de l'arbre qui a pour racine lettre"""
-    if lettre == "":
+    """renvoie la taille de l'arbre qui a pour racine la lettre"""
+    if lettre == "" or lettre not in arbre.keys():
         return 0
     else:
         taille_sag = taille(arbre, arbre[lettre][0])
@@ -10,10 +10,10 @@ def taille(arbre: dict, lettre: str) -> int:
 
 def tri_iteratif(tab):
     for k in range(len(tab) - 1, 0, -1):  # parcourt le tableau de la fin au debut
-        imax = 0  # on cherche le max dans l'intervalle [0, k]
-        for i in range(0, k):  # on parcourt le tableau du debut a k
+        imax = 0
+        for i in range(0, k):  # on parcourt le tableau du debut a k - 1
             if tab[i] > tab[imax]:
                 imax = i
-        if tab[imax] > tab[k]:
+        if tab[imax] > tab[k]:  # si le maximum trouve est superieur a k
             tab[k], tab[imax] = tab[imax], tab[k]  # on echange
     return tab

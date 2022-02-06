@@ -8,7 +8,7 @@ def rechercheMin(tab: list) -> int:
     return i_min
 
 
-def separe(tab):  # identique au sujet 12
+def separe(tab):  # similaire au sujet 12
     i = 0
     j = len(tab) - 1
     while i < j:

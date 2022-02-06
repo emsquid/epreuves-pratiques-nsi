@@ -1,6 +1,6 @@
 def maxliste(tab: list) -> int:
     """renvoie le plus grand element du tableau"""
-    assert type(tab) == list and tab != [], "tab est un tableau non vide"
+    assert type(tab) == list and tab != [], "tab doit etre un tableau non vide"
     # solution facile : return max(tab)
     maxi = tab[0]
     for element in tab:

@@ -1,4 +1,7 @@
-def recherche(a, t: list) -> int:
+from typing import Any
+
+
+def recherche(a: Any, t: list) -> int:
     """renvoie le nombre d'occurences de a dans t"""
     assert type(a) == float or type(a) == int, "a doit etre un nombre"
     assert type(t) == list, "t doit etre un tableau"

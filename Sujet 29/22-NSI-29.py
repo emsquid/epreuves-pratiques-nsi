@@ -1,6 +1,6 @@
 def fibonacci(n: int) -> int:
     """renvoie le n ieme nombre de la suite de fibonacci (prog dynamique)"""
-    assert type(n) == int and n > 0, "n est un entier strictement positif"
+    assert type(n) == int and n > 0, "n doit etre un entier strictement positif"
     tab_fib = [None] * (n + 1)  # on initialise un tableau de taille n + 1
     tab_fib[1], tab_fib[2] = 1, 1  # on initialise les valeurs de u1 et u2
     for i in range(3, n + 1):  # puis on construit le reste du tableau

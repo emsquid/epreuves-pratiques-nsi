@@ -1,5 +1,6 @@
 def recherche(elt: int, tab: list) -> int:
     """retourne l'indice de la derniere occurence de elt dans tab ou -1"""
+    assert type(tab) == list, "tab doit etre un tableau"
     indice = -1  # on initialise l'indice a - 1
     for i in range(len(tab)):
         if tab[i] == elt:
@@ -19,13 +20,13 @@ class AdresseIP:
     def est_reservee(self):
         """renvoie True si l'adresse IP est une adresse
         réservée, False sinon"""
-        # on verifie simplement que l'adresse n'est pas reservee
         return self.adresse == "192.168.0.0" or self.adresse == "192.168.0.255"
 
     def adresse_suivante(self):
         """renvoie un objet de AdresseIP avec l'adresse
         IP qui suit l'adresse self
         si elle existe et False sinon"""
+        # on s'interesse au dernier octet
         if self.liste_octet()[3] < 254:
             octet_nouveau = self.liste_octet()[3] + 1
             return AdresseIP("192.168.0." + str(octet_nouveau))

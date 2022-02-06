@@ -1,4 +1,4 @@
-def moyenne(tab: list) -> float:  # identique au sujet 28
+def moyenne(tab: list) -> float:  # similaire au sujet 28
     """
     moyenne(list) -> float
     Entrée : un tableau non vide d'entiers
@@ -38,4 +38,4 @@ def dichotomie(tab, x):
             debut = m + 1
         else:
             fin = m - 1
-    return False, 3  # dernier cas renvoyant False (False, 3)
+    return False, 3  # troisieme cas renvoyant False

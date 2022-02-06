@@ -1,6 +1,6 @@
 def max_dico(dico: dict) -> tuple:
     """renvoie le maximum du dico et sa cle"""
-    assert type(dico) == dict and dico != {}, "dico est un dictionnaire non vide"
+    assert type(dico) == dict and dico != {}, "dico doit etre un dictionnaire non vide"
     # j'utilise la fonction max pour recuperer la cle du maximum
     cle_max = max(dico, key=lambda cle: dico[cle])
     return (cle_max, dico[cle_max])
@@ -39,5 +39,5 @@ def eval_expression(tab):
                 resultat = p.depiler() + p.depiler()  # on additionne les deux derniers
             else:  # sinon c'est un *
                 resultat = p.depiler() * p.depiler()  # on multiplie les deux derniers
-            p.empiler(resultat)  # et on empile le resultat
+            p.empiler(resultat)  # on empile le resultat
     return p.depiler()  # a la fin on renvoi le seul element restant
