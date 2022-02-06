@@ -1,6 +1,6 @@
 def moyenne(notes: list) -> float:
     """renvoie la moyenne ponderee de la liste de notes"""
-    assert type(notes) == list and notes != [], "notes doit etre une liste non vide"
+    assert type(notes) == list and notes != [], "notes doit etre un tableau non vide"
     note_totale = 0
     coeff_total = 0
     for note, coeff in notes:  # on separe directement le couple (note, coeff)

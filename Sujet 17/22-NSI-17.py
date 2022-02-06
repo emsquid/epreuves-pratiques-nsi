@@ -1,7 +1,7 @@
 def nombre_de_mots(phrase: str) -> int:
     """renvoie le nombre de mots presents dans la phrase"""
     compte = 0
-    # il y a autant de mots que d'espace (+ 1 si on a un point '.' a la fin)
+    # il y a autant de mots que d'espace (+ 1 si on a un point "." a la fin)
     for caractere in phrase:
         if caractere == " " or caractere == ".":
             compte += 1
@@ -67,14 +67,14 @@ class ABR:
         binaire et False sinon.
         """
         if self.est_vide():
-            return False  # l'element n'est pas present si l'abr est vide
+            return False  # si l'abr est vide l'element n'est pas present
         else:
             if element < self.racine.valeur:
-                # on recherche dans le SAG si element < racine
+                # si element < racine on recherche dans le SAG
                 return self.racine.gauche.recherche(element)
             elif element > self.racine.valeur:
-                # on recherche dans le SAD si element > racine
+                # si element > racine on recherche dans le SAD
                 return self.racine.droite.recherche(element)
             else:
-                # on retourne True si on l'a trouve
+                # si on l'a trouve on retourne True
                 return True

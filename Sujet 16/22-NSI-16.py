@@ -1,5 +1,6 @@
-def maxi(tab: list) -> tuple:  # identique au sujet au sujet 6 ???
+def maxi(tab: list) -> tuple:  # identique au sujet au sujet 6
     """retourne le maximum de la liste et son indice"""
+    assert type(tab) == list and tab != [], "tab doit etre un tableau non vide"
     i_max = 0
     for i in range(len(tab)):
         if tab[i] > tab[i_max]:
@@ -9,7 +10,7 @@ def maxi(tab: list) -> tuple:  # identique au sujet au sujet 6 ???
 
 def positif(T):
     T2 = list(T)  # copie
-    T3 = []  # pile vide
+    T3 = []  # pile auxiliaire
     while T2 != []:
         x = T2.pop()  # on depile
         if x >= 0:  # si x >= 0

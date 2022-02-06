@@ -2,7 +2,7 @@ def xor(a: list, b: list) -> list:
     """renvoie a xor b"""
     assert type(a) == type(b) == list and len(a) == len(
         b
-    ), "a et b sont des tableaux de meme longueur"
+    ), "a et b doivent etre des tableaux de meme longueur"
     resultat = []
     for i in range(len(a)):
         resultat.append(a[i] ^ b[i])  # ^ : operateur xor en python
@@ -39,10 +39,10 @@ def est_magique(carre):
 
     # test de la somme de chaque colonne
     for j in range(n):
-        if carre.somme_col(j) != s:  # on teste la somme de la colonne j
+        if carre.somme_col(j) != s:  # on teste la somme de chaque colonne j
             return False
 
-    # test de la somme de chaque diagonale (je conseille de visualiser dans sa tete)
+    # test de la somme de chaque diagonale (a visualiser dans sa tete)
     if sum([carre.valeurs[k][k] for k in range(n)]) != s:  # premiere diago
         return False
     if sum([carre.valeurs[k][n - 1 - k] for k in range(n)]) != s:  # deuxieme diago

@@ -1,7 +1,7 @@
 def occurences_lettres(phrase: str) -> dict:
     """renvoie un dictionnaire contenant
     le nb d'occurences des caracteres de la phrase"""
-    assert type(phrase) == str, "la phrase doit etre une chaine de caracteres"
+    assert type(phrase) == str, "phrase doit etre une chaine de caracteres"
     dico = dict()  # on initialise un dico vide
     for lettre in phrase:
         # on essai de recuperer le nombre d'occurences, sinon on initialise a 0

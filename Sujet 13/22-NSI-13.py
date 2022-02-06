@@ -2,7 +2,7 @@ def rendu(somme_a_rendre: int) -> list:
     """retourne 3 entiers correspondants aux nombre de billets/pieces a rendre"""
     assert (
         type(somme_a_rendre) == int and somme_a_rendre > 0
-    ), "somme_a_rendre est un entier positif non nul"
+    ), "somme_a_rendre doit etre un entier positif non nul"
     n1 = somme_a_rendre // 5
     n2 = (somme_a_rendre % 5) // 2
     n3 = (somme_a_rendre % 5) % 2
@@ -31,11 +31,11 @@ class File:
         maillon = self.dernier_file
         while maillon != None:
             print(maillon.valeur)
-            maillon = maillon.suivant  # on passe au maillon suivant
+            maillon = maillon.suivant
 
     def defile(self):
         if not self.est_vide():
-            if self.dernier_file.suivant == None:  # on teste si on a un seul element
+            if self.dernier_file.suivant == None:  # on verifie si on a un seul element
                 resultat = self.dernier_file.valeur
                 self.dernier_file = None
                 return resultat

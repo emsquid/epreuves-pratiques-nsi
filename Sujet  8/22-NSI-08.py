@@ -1,6 +1,6 @@
 def recherche(elt: int, tab: list) -> int:
     """retourne l'indice de la premiere occurence de elt dans tab ou -1"""
-    assert type(tab) == list, "tab doit etre une liste"
+    assert type(tab) == list, "tab doit etre un tableau"
     for i in range(len(tab)):
         if tab[i] == elt:
             return i  # on retourne des que l'on trouve elt

@@ -1,6 +1,6 @@
 def delta(tab: list) -> list:
     """renvoie le tableau compresse a la maniere du delta encoding"""
-    assert type(tab) == list and tab != [], "tab doit etre une liste non vide"
+    assert type(tab) == list and tab != [], "tab doit etre un tableau non vide"
     resultat = [tab[0]]
     for i in range(1, len(tab)):  # on commence a l'indice 1
         # on calcule la difference entre l'actuel et le precedent

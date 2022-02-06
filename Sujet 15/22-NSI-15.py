@@ -1,6 +1,9 @@
-def nb_repetitions(elt, tab: list) -> int:
+from black import Any
+
+
+def nb_repetitions(elt: Any, tab: list) -> int:
     """renvoie le nombre d'occurences d'elt dans tab"""
-    assert type(tab) == list, "tab doit etre une liste"
+    assert type(tab) == list, "tab doit etre un tableau"
     # solution facile : return tab.count(elt)
     compte = 0
     for e in tab:
@@ -14,5 +17,5 @@ def binaire(a):
     a = a // 2
     while a > 0:
         bin_a = str(a % 2) + bin_a  # on ajoute les bits suivants devant
-        a = a // 2  # on effectue la divison euclidienne de a par 2
+        a = a // 2  # on divise a par 2
     return bin_a

@@ -1,6 +1,8 @@
 def mini(releve: list, date: list) -> tuple:
     """renvoie la plus petite valeur relevee et l'annee correspondante"""
-    assert len(releve) == len(date), "il doit y avoir autant de releve que de dates"
+    assert (
+        len(releve) == len(date) != 0
+    ), "il doit y avoir autant de releves que de dates, et pas 0"
     i_min = 0
     for i in range(len(releve)):
         if releve[i] < releve[i_min]:
