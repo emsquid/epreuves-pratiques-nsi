@@ -46,14 +46,18 @@ class PaquetDeCarte:
 
     def remplir(self):
         """Remplit le paquet de cartes"""
-        for c in range(1, 5):  # toutes les couleurs (entre 1 et 4)
-            for v in range(1, 14):  # toutes les valeurs (entre 1 et 13)
-                self.contenu.append(Carte(c, v))
+        self.contenu = [
+            Carte(couleur, valeur) for couleur in range(1, 5) for valeur in range(1, 14)
+        ]
 
     def getCarteAt(self, pos):
         """Renvoie la Carte qui se trouve à la position donnée"""
-        assert (
-            type(pos) == int and 0 <= pos < 51
-        ), "le paquet contient 52 cartes, pos est un entier entre 0 et 51"
-        # eventuellement (pos - 1) selon l'interpretation
-        return self.contenu[pos]
+        assert type(pos) == int, "pos doit etre un entier"
+        if 0 <= pos < 49: # assert serait mieux car on renvoie None sinon
+            return self.contenu[pos]
+
+
+unPaquet = PaquetDeCarte() 
+unPaquet.remplir() 
+uneCarte = unPaquet.getCarteAt(48)
+print(uneCarte.getNom() + " de " + uneCarte.getCouleur())

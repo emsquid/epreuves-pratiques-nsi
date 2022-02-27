@@ -26,10 +26,9 @@ class Noeud:
 def expression_infixe(e):
     s = ""  # on initialise l'expression
     if e.gauche is not None:
-        s = s + expression_infixe(e.gauche)  # on ajoute l'expression du SAG
+        s = "(" + s + expression_infixe(e.gauche)  # on ajoute l'expression du SAG
     s = s + str(e)  # on ajoute la valeur de la racine
     if e.droit is not None:
-        s = s + expression_infixe(e.droit)  # on ajoute l'expression du SAD
-    if e.est_une_feuille():  # si e est une feuille, on retourne juste l'expression
-        return s
-    return "(" + s + ")"
+        s = s + expression_infixe(e.droit) + ")"  # on ajoute l'expression du SAD
+    # erreur dans le sujet, le if cree une erreur
+    return s

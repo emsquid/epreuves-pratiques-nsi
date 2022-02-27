@@ -14,6 +14,6 @@ def tri_iteratif(tab):
         for i in range(0, k):  # on parcourt le tableau du debut a k - 1
             if tab[i] > tab[imax]:
                 imax = i
-        if tab[imax] > tab[k]:  # si le maximum trouve est superieur a k
+        if tab[imax] > tab[k]:  # si le maximum trouve est superieur a tab[k]
             tab[k], tab[imax] = tab[imax], tab[k]  # on echange
     return tab

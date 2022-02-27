@@ -4,7 +4,7 @@ def occurrence_max(chaine: str) -> str:
     # car leur methode revient a une utilisation de dictionnaire sans dictionnaire
     assert type(chaine) == str and chaine != "", "chaine doit ne pas etre vide"
     freq = {chr(ord("a") + i): 0 for i in range(26)}  # dico contenant les frequences
-    maxi = chaine[0]  # variable pour tenir freq de la lettre la plus frequente
+    maxi = chaine[0]  # variable pour tenir compte de la lettre la plus frequente
     for caractere in chaine:
         if caractere in freq.keys():
             freq[caractere] += 1
@@ -39,7 +39,6 @@ def binaire(image, seuil):
     d'une liste de listes contenant des 0 si la valeur
     du pixel est strictement inferieure au seuil
     et 1 sinon"""
-    # l'exemple de cette fonction semble etre faux et renvoyé l'inverse
     # on cree une image de 0 aux memes dimensions que le parametre image
     L = [[0 for k in range(nbCol(image))] for i in range(nbLig(image))]
     for i in range(len(image)):
