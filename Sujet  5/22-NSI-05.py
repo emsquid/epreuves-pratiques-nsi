@@ -53,11 +53,5 @@ class PaquetDeCarte:
     def getCarteAt(self, pos):
         """Renvoie la Carte qui se trouve à la position donnée"""
         assert type(pos) == int, "pos doit etre un entier"
-        if 0 <= pos < 49: # assert serait mieux car on renvoie None sinon
+        if 0 <= pos < len(self.contenu): # assert serait mieux car on renvoie None sinon
             return self.contenu[pos]
-
-
-unPaquet = PaquetDeCarte() 
-unPaquet.remplir() 
-uneCarte = unPaquet.getCarteAt(48)
-print(uneCarte.getNom() + " de " + uneCarte.getCouleur())
